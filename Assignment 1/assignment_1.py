@@ -62,6 +62,9 @@ class RoutingGraph(Graph):
             arcs.append(Arc(tail_node, head_node, "Fuel up", 15))
         return arcs
 
+    def estimated_cost_to_goal(self, node):
+        return 0 # as specified in Q2 
+
                 
 
     def starting_nodes(self):
