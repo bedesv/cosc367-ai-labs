@@ -29,10 +29,9 @@ class LocationGraph(Graph):
 class LCFSFrontier(Frontier):
 
     def __init__(self):
-        self.key = lambda x: (x[0].cost, x[1])
+
         self.queue = []
         self.index = 0
-        self.expanded = set()
 
     def add(self, path):
         """
