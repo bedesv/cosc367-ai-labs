@@ -1,10 +1,10 @@
 solution(V1,V2,V3,H1,H2,H3):- 
-    word(A,A1,A2,A3,A4,A5,A6,A7), 
-    word(B,B1,B2,B3,B4,B5,B6,B7),
-    word(C,C1,C2,C3,C4,C5,C6,C7),
-    word(D,D1,D2,D3,D4,D5,D6,D7),
-    word(E,E1,E2,E3,E4,E5,E6,E7),
-    word(F,F1,F2,F3,F4,F5,F6,F7), 
+    word(V1,_,A2,_,A4,_,A6,_), 
+    word(V2,_,B2,_,B4,_,B6,_),
+    word(V3,_,C2,_,C4,_,C6,_),
+    word(H1,_,D2,_,D4,_,D6,_),
+    word(H2,_,E2,_,E4,_,E6,_),
+    word(H3,_,F2,_,F4,_,F6,_), 
     A2 = D2,
     A4 = E2,
     A6 = F2,
@@ -13,13 +13,7 @@ solution(V1,V2,V3,H1,H2,H3):-
     B6 = F4, 
     C2 = D6,
     C4 = E6,
-    C6 = F6, 
-    V1=A,
-    V2=B,
-    V3=C,
-    H1=D,
-    H2=E,
-    H3=F.
+    C6 = F6.
 
 word(abalone,a,b,a,l,o,n,e). 
 word(abandon,a,b,a,n,d,o,n). 

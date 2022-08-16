@@ -137,14 +137,16 @@ def print_map(map_graph, frontier, solution):
 
 
 map_str = """\
-+---------+
-|         |
-|    G    |
-|         |
-+---------+
++----------------+
+|2              F|
+|XX     G 123    |
+|3XXXXXXXXXXXXXX |
+|  F             |
+|          F     |
++----------------+
 """
 
 map_graph = RoutingGraph(map_str)
 frontier = AStarFrontier(map_graph)
 solution = next(generic_search(map_graph, frontier), None)
-print_map(map_graph, frontier, solution)
+print_actions(solution)
