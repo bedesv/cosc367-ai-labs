@@ -70,3 +70,22 @@ print(sorted(network.keys()))
 print(network['A']['Parents'])
 print(network['B']['Parents'])
 print(network['C']['Parents'])
+
+network = {
+    'A': {
+        'Parents': [],
+        'CPT': {
+            (): 0.1
+            }},
+            
+    'B': {
+        'Parents': ['A'],
+        'CPT': {
+            (True,): 0.8,
+            (False,): 0.7,
+            }},
+    }
+ 
+answer = query(network, 'B', {'A': False})
+print("P(B=true|A=false) = {:.5f}".format(answer[True]))
+print("P(B=false|A=false) = {:.5f}".format(answer[False]))

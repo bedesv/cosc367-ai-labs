@@ -23,16 +23,13 @@ def n_queens_cost(state):
     """
 
     conflicts = 0
-    checked = set()
     n = len(state)
     for i in range(n):
-        for j in range(n):
-            if i != j and (i, j) not in checked and (j, i) not in checked:
-                dx = abs(i - j)
-                dy = abs(state[i]-state[j])
-                if dx == dy:
-                    checked.add((i, j))
-                    conflicts += 1
+        for j in range(i + 1, len(state)):
+            dx = i - j
+            dy = state[i] - state[j]
+            if abs(dx) == abs(dy):
+                conflicts += 1
     return conflicts
 
 
